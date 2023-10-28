@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+{% extends 'basic_app/base.html' %}  
+<!-- Loading custom filter -->
+{% load my_extras %}
+
+    {% block body_block %}
+        <h1>WELCOME TO INDEX!</h1>
+
+        <!-- Using built-in filter -->
+        <!-- 'upper' turns data in upper case -->
+        <h2>{{ text|upper }}</h2>
+        <!-- 'add' does addition arithmetic -->
+        <h2>{{ number|add:"98" }}</h2>
+
+        <!-- Using custom filter -->
+        <h2>{{ text|cuts:'hell' }}</h2>
+
+
+    {% endblock %}
+        
+  
